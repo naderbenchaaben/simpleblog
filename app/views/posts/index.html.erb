@@ -1,1 +1,8 @@
-<h1>index</h1>
+<h1>Blog posts</h1>
+<% @posts.each do |post| %>
+    <div class="alert alert-info">
+        <h3><%= post.title%></h3>
+        <p><%= post.body %> </p>
+        <%= link_to "Read More", post_path(post), :class => 'btn btn-default stretched-link' %>
+    </div>
+<% end %>

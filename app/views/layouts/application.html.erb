@@ -5,12 +5,26 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css' %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <div style="float: right">
+  <span>
+    <button type="button" class="btn btn-dark" style="float: center"><%= link_to "home", home_path %></button>
+  </span>
+            
+  <span>
+    <button type="button" class="btn btn-dark" style="float: center"><%= link_to "Create Post", new_post_path %></button>   
+  </span><br/>
+  <br/>
+  </div>
+
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
